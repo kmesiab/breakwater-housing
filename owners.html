@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owners — Breakwater Reentry Housing</title>
+<meta name="description" content="Kevin Mesiab and Heather Hewett, co-owners of Breakwater Reentry Housing — transitional housing for Washington reentry.">
+<style>
+  :root{
+    --evergreen:#1D4A38;
+    --evergreen-deep:#122E23;
+    --evergreen-soft:#EAF0EC;
+    --sand:#D3A960;
+    --sand-soft:#F5EDDD;
+    --ink:#1e1e1e;
+    --muted:#5a5a5a;
+    --paper:#FAF8F3;
+    --line:#e7e1d1;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+       background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:50;background:rgba(250,248,243,.92);
+              backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .brand .bt{line-height:1.15}
+  .brand .bt .n{font-weight:800;font-size:16px;letter-spacing:.12em;color:var(--evergreen-deep)}
+  .brand .bt .s{font-weight:600;font-size:9.5px;letter-spacing:.32em;color:#8a7a55}
+  nav.links{display:flex;gap:28px}
+  nav.links a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:600;letter-spacing:.02em}
+  nav.links a:hover{color:var(--evergreen-deep)}
+  nav.links a.active{color:var(--evergreen-deep)}
+  .nav .cta{background:var(--evergreen);color:#fff;text-decoration:none;font-size:14px;font-weight:700;
+            padding:10px 20px;border-radius:8px;letter-spacing:.02em}
+  .nav .cta:hover{background:var(--evergreen-deep)}
+  @media(max-width:760px){nav.links{display:none}}
+
+  /* Page hero */
+  .page-hero{padding:72px 0 56px;text-align:center}
+  .page-hero .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.24em;color:var(--evergreen);
+                 text-transform:uppercase;margin-bottom:20px;padding:8px 16px;background:var(--evergreen-soft);
+                 border-radius:999px}
+  .page-hero h1{font-size:clamp(34px,4.6vw,52px);line-height:1.12;letter-spacing:-.015em;color:var(--evergreen-deep);
+           max-width:20ch;margin:0 auto 20px;font-weight:800}
+  .page-hero p{font-size:18px;color:var(--muted);max-width:62ch;margin:0 auto}
+
+  /* Owner cards */
+  .owners{padding:24px 0 96px}
+  .owner{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+         display:grid;grid-template-columns:340px 1fr;margin-bottom:40px}
+  @media(max-width:860px){.owner{grid-template-columns:1fr}}
+  .owner .photo{background:var(--evergreen-soft);display:flex;align-items:center;justify-content:center;min-height:340px}
+  .owner .photo img{width:100%;height:100%;object-fit:cover;display:block;min-height:340px}
+  .owner .bio{padding:44px 48px}
+  @media(max-width:860px){.owner .bio{padding:32px 28px}}
+  .owner .role{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#8a7a55;margin-bottom:12px}
+  .owner h2{font-size:clamp(26px,3.2vw,36px);color:var(--evergreen-deep);font-weight:800;margin-bottom:6px;letter-spacing:-.01em}
+  .owner .title{font-size:15px;font-weight:600;color:var(--muted);margin-bottom:22px}
+  .owner .bio p{font-size:16px;color:var(--muted);margin-bottom:16px}
+  .owner .bio p strong{color:var(--ink)}
+  .owner .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .owner .creds span{font-size:13px;font-weight:700;color:var(--evergreen-deep);background:var(--evergreen-soft);
+                     padding:7px 14px;border-radius:999px}
+
+  /* Statement */
+  .statement{background:var(--evergreen-deep);color:#eef2ee;border-radius:18px;padding:56px 52px;margin-bottom:96px}
+  @media(max-width:760px){.statement{padding:40px 28px}}
+  .statement .kicker{font-size:12px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--sand);margin-bottom:16px}
+  .statement blockquote{font-size:clamp(20px,2.6vw,28px);line-height:1.5;font-weight:600;color:#fff;max-width:34ch}
+  .statement .attr{margin-top:20px;font-size:14px;color:#c9d4c9}
+
+  /* Footer */
+  footer.site{border-top:1px solid var(--line);padding:36px 0;background:var(--white)}
+  footer.site .frow{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer.site .fbrand{display:flex;align-items:center;gap:10px}
+  footer.site small{color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="Breakwater Reentry Housing home">
+      <svg width="40" height="35" viewBox="0 0 120 104" aria-hidden="true">
+        <path d="M8 64 L60 16 L112 64 L98 64 L60 30 L22 64 Z" fill="#1D4A38"/>
+        <rect x="34" y="74" width="52" height="10" rx="1.5" fill="#D3A960"/>
+      </svg>
+      <span class="bt"><span class="n">BREAKWATER</span><br><span class="s">REENTRY HOUSING</span></span>
+    </a>
+    <nav class="links">
+      <a href="index.html#mission">Mission</a>
+      <a href="index.html#program">Program</a>
+      <a href="index.html#about">About</a>
+      <a href="owners.html" class="active">Owners</a>
+      <a href="index.html#partners">For Partners</a>
+    </nav>
+    <a class="cta" href="index.html#contact">Contact</a>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Ownership</span>
+    <h1>The people behind Breakwater</h1>
+    <p>Breakwater Reentry Housing is owned and operated by Kevin Mesiab and Heather Hewett — a founder who has lived the reentry journey and an operations leader who has spent her career keeping organizations running.</p>
+  </div>
+</div>
+
+<div class="owners">
+  <div class="wrap">
+
+    <div class="owner">
+      <div class="photo"><img src="images/kevin-mesiab.jpg" alt="Kevin Mesiab, co-owner of Breakwater Reentry Housing"></div>
+      <div class="bio">
+        <div class="role">Co-Owner</div>
+        <h2>Kevin Mesiab</h2>
+        <div class="title">Founder · Operations &amp; Technology</div>
+        <p>Kevin is a software engineer and serial founder who grew up in poverty and has been through rehab. He knows what it means to start over — and he knows that the difference between making it and not is usually one stable address and one person who doesn't give up on you.</p>
+        <p>He brings <strong>two decades of building and running companies</strong> — from hardware R&amp;D to venture-backed startups to solo software products — to the operational side of Breakwater: property systems, resident intake, compliance documentation, and the kind of process discipline that keeps a house safe and a vendor relationship solid.</p>
+        <div class="creds">
+          <span>Founder — multiple ventures</span>
+          <span>20+ yrs engineering &amp; operations</span>
+          <span>Washington resident</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="owner">
+      <div class="photo"><img src="images/heather-hewett.webp" alt="Heather Hewett, co-owner of Breakwater Reentry Housing"></div>
+      <div class="bio">
+        <div class="role">Co-Owner</div>
+        <h2>Heather Hewett</h2>
+        <div class="title">Finance · Insurance · Resident Services</div>
+        <p>Heather has spent <strong>17 years as the office manager of a medical practice</strong>, where she runs insurance, finance, and the daily operations patients depend on. She is the person who makes sure the bills are right, the paperwork is filed, and nobody falls through the cracks.</p>
+        <p>At Breakwater she leads <strong>finance, insurance, and resident services</strong> — the back-office backbone that keeps homes funded, compliant, and running. Her experience navigating insurance systems and managing household-scale budgets translates directly to the voucher documentation and cost discipline this work demands.</p>
+        <div class="creds">
+          <span>17 yrs office management</span>
+          <span>Insurance &amp; finance</span>
+          <span>Operations leadership</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="statement">
+      <div class="kicker">Why we do this</div>
+      <blockquote>Everyone deserves a door that opens when they come home. We build houses where that door stays open.</blockquote>
+      <div class="attr">— Kevin Mesiab &amp; Heather Hewett, Co-Owners</div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap frow">
+    <div class="fbrand">
+      <svg width="30" height="26" viewBox="0 0 120 104" aria-hidden="true">
+        <path d="M8 64 L60 16 L112 64 L98 64 L60 30 L22 64 Z" fill="#1D4A38"/>
+        <rect x="34" y="74" width="52" height="10" rx="1.5" fill="#D3A960"/>
+      </svg>
+      <small><strong>BREAKWATER REENTRY HOUSING LLC</strong></small>
+    </div>
+    <small>© 2026 Breakwater Reentry Housing LLC · Washington State</small>
+  </div>
+</footer>
+
+</body>
+</html>
